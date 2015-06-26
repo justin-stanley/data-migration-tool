@@ -70,4 +70,11 @@ class Document
     {
         return $this->structure;
     }
+
+    public function __destruct()
+    {
+        unset($this->structure);
+        $this->recordCollectionFactory = null;
+        $this->documentName = null;
+    }
 }

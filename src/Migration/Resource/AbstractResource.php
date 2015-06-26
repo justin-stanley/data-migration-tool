@@ -44,7 +44,7 @@ abstract class AbstractResource
     /**
      * @var array
      */
-    protected $documentList;
+    protected $documentList = [];
 
     /**
      * @param AdapterFactory $adapterFactory

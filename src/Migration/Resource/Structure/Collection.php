@@ -53,4 +53,9 @@ class Collection extends \Migration\Resource\AbstractCollection
         $this->structureDocuments[$documentName] = $position;
         return $this;
     }
+
+    public function __destruct()
+    {
+        $this->structureDocuments = [];
+    }
 }

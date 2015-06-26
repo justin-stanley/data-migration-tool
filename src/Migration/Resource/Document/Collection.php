@@ -42,4 +42,9 @@ class Collection extends \Migration\Resource\AbstractCollection
         $this->data[] = $document;
         return $this;
     }
+
+    public function __destruct()
+    {
+        $this->data = [];
+    }
 }

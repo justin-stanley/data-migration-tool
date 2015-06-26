@@ -140,4 +140,14 @@ class RecordTransformer
             }
         }
     }
+
+    public function __destruct()
+    {
+        unset($this->sourceDocument);
+        unset($this->destDocument);
+        unset($this->handlerManagerFactory);
+        unset($this->sourceHandlerManager);
+        unset($this->destHandlerManager);
+        unset($this->mapReader);
+    }
 }

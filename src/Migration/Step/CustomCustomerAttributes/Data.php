@@ -138,6 +138,7 @@ class Data extends DatabaseStage
                 $this->destination->saveRecords($destinationDocument->getName(), $recordsToSave);
             };
             $this->progress->finish(LogManager::LOG_LEVEL_DEBUG);
+            $this->logger->info('CUST ATTR ' . memory_get_usage(true));
         }
         $this->progress->finish(LogManager::LOG_LEVEL_INFO);
         return true;

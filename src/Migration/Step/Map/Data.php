@@ -139,9 +139,18 @@ class Data implements StageInterface
                     $destinationRecords->addRecord($destRecord);
                 }
                 $this->destination->saveRecords($destinationName, $destinationRecords);
+                unset($destinationRecords);
+                unset($destRecord);
+                if (isset($record)) {
+                    unset($record);
+                }
             }
             $this->progress->addProcessedEntity($this, $stage, $sourceDocName);
             $this->progressBar->finish(LogManager::LOG_LEVEL_DEBUG);
+            unset($sourceDocument);
+            unset($destDocument);
+            unset($recordTransformer);
+            $this->logger->info('Map ' . memory_get_usage(true));
         }
         $this->progressBar->finish(LogManager::LOG_LEVEL_INFO);
         return true;

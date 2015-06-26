@@ -97,4 +97,10 @@ class Collection extends \Migration\Resource\AbstractCollection
         }
         return $this;
     }
+
+    public function __destruct()
+    {
+        $this->data = [];
+        unset($this->structure);
+    }
 }

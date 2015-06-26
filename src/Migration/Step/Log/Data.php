@@ -137,6 +137,7 @@ class Data implements StageInterface
                 $this->destination->saveRecords($destinationName, $destinationRecords);
             }
             $this->progress->finish(LogManager::LOG_LEVEL_DEBUG);
+            $this->logger->info('Log ' . memory_get_usage(true));
         }
         $this->clearLog(array_keys($this->readerGroups->getGroup('destination_documents_to_clear')));
         $this->progress->finish(LogManager::LOG_LEVEL_INFO);

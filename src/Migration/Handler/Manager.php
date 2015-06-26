@@ -81,4 +81,10 @@ class Manager
     {
         return $this->handlers;
     }
+
+    public function __destruct()
+    {
+        unset($this->objectManager);
+        $this->handlers = [];
+    }
 }

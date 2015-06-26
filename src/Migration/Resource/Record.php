@@ -141,4 +141,10 @@ class Record
 
         return array_keys($this->structure->getFields());
     }
+
+    public function __destruct()
+    {
+        $this->data = [];
+        unset($this->structure);
+    }
 }

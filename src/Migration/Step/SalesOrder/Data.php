@@ -150,6 +150,7 @@ class Data implements StageInterface
                 $this->destination->saveRecords($eavDocumentName, $destEavCollection);
                 $this->progress->finish(LogManager::LOG_LEVEL_DEBUG);
             }
+            $this->logger->info('SaleOrder ' . memory_get_usage(true));
         }
         $this->progress->finish(LogManager::LOG_LEVEL_INFO);
         return true;

@@ -43,4 +43,9 @@ class Structure
     {
         return $this->data;
     }
+
+    public function __destruct()
+    {
+        $this->data = [];
+    }
 }
