@@ -335,9 +335,6 @@
             <path>catalog/search/search_type</path>
         </ignore>
         <ignore>
-            <path>catalog/search/use_layered_navigation_count</path>
-        </ignore>
-        <ignore>
             <path>catalog/seo/site_map</path>
         </ignore>
         <ignore>

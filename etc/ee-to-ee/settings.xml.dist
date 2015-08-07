@@ -335,9 +335,6 @@
             <path>catalog/search/search_type</path>
         </ignore>
         <ignore>
-            <path>catalog/search/use_layered_navigation_count</path>
-        </ignore>
-        <ignore>
             <path>catalog/seo/site_map</path>
         </ignore>
         <ignore>
@@ -1209,6 +1206,10 @@
         <rename>
             <path>catalog/enterprise_catalogpermissions/enabled</path>
             <to>catalog/magento_catalogpermissions/enabled</to>
+        </rename>
+        <rename>
+            <path>catalog/search/solr_server_suggestion_count</path>
+            <to>catalog/search/search_suggestion_count</to>
         </rename>
         <rename>
             <path>catalog/enterprise_catalogpermissions/grant_catalog_category_view</path>
