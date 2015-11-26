@@ -180,64 +180,7 @@
                 <document>catalog_product_index_price</document>
             </ignore>
             <ignore>
-                <document>catalog_product_index_price_bundle_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_bundle_opt_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_bundle_opt_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_bundle_sel_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_bundle_sel_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_bundle_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_cfg_opt_agr_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_cfg_opt_agr_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_cfg_opt_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_cfg_opt_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_downlod_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_downlod_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_final_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_final_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_opt_agr_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_opt_agr_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_opt_idx</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_opt_tmp</document>
-            </ignore>
-            <ignore>
-                <document>catalog_product_index_price_tmp</document>
+                <document>catalog_product_index_price*</document>
             </ignore>
             <ignore>
                 <document>catalog_product_index_tier_price</document>
@@ -268,18 +211,6 @@
             </ignore>
             <ignore>
                 <document>widget_instance_page_layout</document>
-            </ignore>
-            <ignore>
-                <document>find_feed_import_codes</document>
-            </ignore>
-            <ignore>
-                <document>googlebase_attributes</document>
-            </ignore>
-            <ignore>
-                <document>googlebase_items</document>
-            </ignore>
-            <ignore>
-                <document>googlebase_types</document>
             </ignore>
             <ignore>
                 <document>googlecheckout_api_debug</document>
@@ -571,6 +502,12 @@
             </ignore>
             <ignore>
                 <document>core_website</document>
+            </ignore>
+            <ignore>
+                <document>catalog_product_entity_group_price</document>
+            </ignore>
+            <ignore>
+                <document>catalog_product_entity_tier_price</document>
             </ignore>
             <rename>
                 <document>catalogsearch_query</document>
@@ -903,6 +840,14 @@
                 <handler class="\Migration\Handler\Placeholder" />
             </transform>
             <transform>
+                <field>newsletter_template.template_text</field>
+                <handler class="\Migration\Handler\Placeholder" />
+            </transform>
+            <transform>
+                <field>core_email_template.template_text</field>
+                <handler class="\Migration\Handler\Placeholder" />
+            </transform>
+            <transform>
                 <field>widget_instance.instance_type</field>
                 <handler class="\Migration\Handler\ClassMap" />
             </transform>
@@ -925,6 +870,22 @@
             <transform>
                 <field>sales_flat_order_item.weee_tax_applied</field>
                 <handler class="Migration\Handler\SerializeToJson"/>
+            </transform>
+            <transform>
+                <field>sales_flat_quote_item.weee_tax_applied</field>
+                <handler class="Migration\Handler\SerializeToJson"/>
+            </transform>
+            <transform>
+                <field>sales_flat_creditmemo_item.weee_tax_applied</field>
+                <handler class="Migration\Handler\SerializeToJson"/>
+            </transform>
+            <transform>
+                <field>sales_flat_invoice_item.weee_tax_applied</field>
+                <handler class="Migration\Handler\SerializeToJson"/>
+            </transform>
+            <transform>
+                <field>catalog_product_entity_media_gallery.value_id</field>
+                <handler class="\Migration\Handler\Gallery\InsertValueToEntity"/>
             </transform>
             <ignore>
                 <field>admin_rule.role_type</field>
@@ -988,6 +949,9 @@
             </ignore>
             <ignore>
                 <field>catalog_product_entity_gallery.entity_type_id</field>
+            </ignore>
+            <ignore>
+                <field>catalog_product_entity_media_gallery.entity_id</field>
             </ignore>
             <ignore>
                 <field>catalog_product_entity_int.entity_type_id</field>
@@ -1560,6 +1524,54 @@
             <ignore>
                 <document>catalogsearch_fulltext_scope*</document>
             </ignore>
+            <ignore>
+                <document>reporting_module_status</document>
+            </ignore>
+            <ignore>
+                <document>reporting_orders</document>
+            </ignore>
+            <ignore>
+                <document>reporting_system_updates</document>
+            </ignore>
+            <ignore>
+                <document>reporting_users</document>
+            </ignore>
+            <ignore>
+                <document>reporting_counts</document>
+            </ignore>
+            <ignore>
+                <document>queue</document>
+            </ignore>
+            <ignore>
+                <document>queue_message</document>
+            </ignore>
+            <ignore>
+                <document>queue_message_status</document>
+            </ignore>
+            <ignore>
+                <document>admin_passwords</document>
+            </ignore>
+            <ignore>
+                <document>support_backup</document>
+            </ignore>
+            <ignore>
+                <document>support_backup_item</document>
+            </ignore>
+            <ignore>
+                <document>catalog_product_entity_media_gallery_value_to_entity</document>
+            </ignore>
+            <ignore>
+                <document>catalog_product_entity_media_gallery_value_video</document>
+            </ignore>
+            <ignore>
+                <document>catalog_product_entity_tier_price</document>
+            </ignore>
+            <ignore>
+                <document>customer_grid_flat</document>
+            </ignore>
+            <ignore>
+                <document>visual_merchandiser_rule</document>
+            </ignore>
         </document_rules>
         <field_rules>
             <transform>
@@ -1634,8 +1646,21 @@
                 <field>sales_order_status_state.visible_on_front</field>
                 <handler class="\Migration\Handler\SalesOrderStatusState\SetVisibleOnFront"/>
             </transform>
+            <transform>
+                <field>catalog_product_entity_media_gallery_value.entity_id</field>
+                <handler class="\Migration\Handler\Gallery\SetEntityId"/>
+            </transform>
             <ignore>
                 <field>catalog_product_entity_media_gallery_value.entity_id</field>
+            </ignore>
+            <ignore>
+                <field>catalog_product_entity_media_gallery.media_type</field>
+            </ignore>
+            <ignore>
+                <field>catalog_product_entity_media_gallery.disabled</field>
+            </ignore>
+            <ignore>
+                <field>catalog_product_entity_media_gallery_value.record_id</field>
             </ignore>
             <ignore>
                 <field>admin_user.interface_locale</field>
@@ -1663,9 +1688,6 @@
             </ignore>
             <ignore>
                 <field>sales_shipment.send_email</field>
-            </ignore>
-            <ignore>
-                <field>sales_order.send_email</field>
             </ignore>
             <ignore>
                 <field>sales_shipment.customer_note</field>
@@ -2304,7 +2326,70 @@
                 <field>wishlist.name</field>
             </ignore>
             <ignore>
+                <field>checkout_agreement.mode</field>
+            </ignore>
+            <ignore>
+                <field>cataloginventory_stock_item.deferred_stock_update</field>
+            </ignore>
+            <ignore>
+                <field>cataloginventory_stock_item.use_config_deferred_stock_update</field>
+            </ignore>
+            <ignore>
                 <field>wishlist.visibility</field>
+            </ignore>
+            <ignore>
+                <field>quote.gw_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote.gw_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote.gw_items_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote.gw_items_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote.gw_card_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote.gw_card_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote_address.gw_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote_address.gw_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote_address.gw_items_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote_address.gw_items_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote_address.gw_card_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>quote_address.gw_card_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gw_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gw_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gw_items_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gw_items_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gw_card_base_price_incl_tax</field>
+            </ignore>
+            <ignore>
+                <field>sales_order.gw_card_price_incl_tax</field>
             </ignore>
             <ignore>
                 <datatype>quote_payment.cc_exp_month</datatype>
